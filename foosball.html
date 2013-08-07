@@ -3,11 +3,14 @@
 </head>
 
 <body>
-  {{> hello}}
+  {{> foosball}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="foosball">
+  <h1>Foosball!</h1>
+  {{> scores}}
+</template>
+
+<template name="scores">
+  <h2>{{currentScore}}</h2>
 </template>
