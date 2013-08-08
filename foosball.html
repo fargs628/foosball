@@ -1,16 +1,31 @@
 <head>
-  <title>foosball</title>
+  <title>Foosball!</title>
 </head>
 
 <body>
-  {{> foosball}}
+  <div class="container">
+    {{> foosball}}
+  </div>
 </body>
 
 <template name="foosball">
-  <h1>Foosball!</h1>
-  {{> scores}}
+  <div class="navbar">
+    <div class="navbar-inner">
+      <h1 class="brand">Foosball!</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset5">
+      {{> scores}}
+      {{> controls}}
+    </div>
+  </div>
 </template>
 
 <template name="scores">
   <h2>{{currentScore}}</h2>
+</template>
+
+<template name="controls">
+  <button id="start" type="button" class="btn btn-primary">Reset</button>
 </template>
